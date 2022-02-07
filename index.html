@@ -8,29 +8,67 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+
     <title>PMPA CIAP</title>
 </head>
 <body>
     <div class="container">
-        <form class="form" id= "login">
+
+        <form class="form" id= "login" action="#" method="get"> 
             <h1 class= "form__title">CIAP</h1>
-            <div class="form__message form__message--error"></div>
+            <div class="form__message form__message--error"></div>    <!-- MENSAGEM DE ERRO (USUÁRIO/SENHA) -->
             <div class="form__input-group">
                 <input type="email" class="form__input" autofocus placeholder="Email">
                 <div class="form__input-error--message"></div>
             </div>
+
             <div class="form__input-group">
-                <input type="password" class="form__input"autofocus placeholder="Senha">
+                <i class="fas fa-lock"></i>
+                <input type="password" class="form__input" autofocus placeholder="Senha" id="myInput">
+                <input type="checkbox" onclick="myFunction()">Show Password                     <!-- TESTE DE JAVASCRIPT -->
+                <span class="eye" onclick="myFunction()">
+                <i id= "hide1" class="far fa-eye"></i>
+                <i id= "hide2" class="far fa-eye-slash"></i>
+                </span>
                 <div class="form__input-error--message"></div>
             </div>
+
             <button class="form__button" type="submit">Entrar</button>
             <p class="form__text">
-                <a href="#" class="form__link">Esqueceu sua senha?</a>
+                <a href="#" class="form__link">Esqueceu sua senha?</a>    
             </p>
             <p class="form__text">
-                <a href="./" class="form__link" id="LinkCreateAccount">Não tem uma conta?</a>
+                <a href="./" class="form__link" id="LinkCreateAccount"></a>
             </p>
+
         </form>
+
     </div>
+
+    <script>
+        
+        function myFunction() {
+            var x = document.getElementById("myInput");
+            var y = document.getElementById("hide1");
+            var z = document.getElementById("hide2");
+
+            if(x.type === 'password') {
+                x.type = "text";
+                y.style.display = "block";
+                z.style.display = "none";
+            }
+            else {
+                x.type = "password";
+                y.style.display = "none";
+                z.style.display = "block";
+            }
+        }
+    </script>
 </body>
 </html>
+
+
+
+
+
