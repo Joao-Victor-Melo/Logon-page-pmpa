@@ -84,9 +84,12 @@ body {
 }
 
 .eye{
-  position:absolute;
-  float: inline-end;
-  cursor: pointer;
+  float: right;
+  margin-top: -31px;
+  margin-right: 1rem;
+  position: relative;
+  z-index: 1;
+  cursor:pointer; 
 }
 
 #hide1 {

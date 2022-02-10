@@ -13,6 +13,8 @@
     <title>PMPA CIAP</title>
 </head>
 <body>
+    <script src= "./main.js"></script>
+    
     <div class="container">
 
         <form class="form" id= "login" action="#" method="get"> 
@@ -24,9 +26,7 @@
             </div>
 
             <div class="form__input-group">
-                <i class="fas fa-lock"></i>
                 <input type="password" class="form__input" autofocus placeholder="Senha" id="myInput">
-                <input type="checkbox" onclick="myFunction()">Show Password                     <!-- TESTE DE JAVASCRIPT -->
                 <span class="eye" onclick="myFunction()">
                 <i id= "hide1" class="far fa-eye"></i>
                 <i id= "hide2" class="far fa-eye-slash"></i>
@@ -45,26 +45,6 @@
         </form>
 
     </div>
-
-    <script>
-        
-        function myFunction() {
-            var x = document.getElementById("myInput");
-            var y = document.getElementById("hide1");
-            var z = document.getElementById("hide2");
-
-            if(x.type === 'password') {
-                x.type = "text";
-                y.style.display = "block";
-                z.style.display = "none";
-            }
-            else {
-                x.type = "password";
-                y.style.display = "none";
-                z.style.display = "block";
-            }
-        }
-    </script>
 </body>
 </html>
 
